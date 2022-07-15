@@ -27,7 +27,7 @@ const processFile = async (file) => {
       path: path.join(DIR_REPORTS, `${date}_` + file + ".csv"),
       header: [
         { id: "name", title: "Name" },
-        { id: "status", title: "Status" },
+        { id: "address", title: "Address" },
       ],
     });
 
@@ -45,7 +45,7 @@ const processFile = async (file) => {
             res == "0x0000000000000000000000000000000000000000" ||
             res == ""
           ) {
-            csvContent.status = "Available";
+            csvContent.status = "-";
             csvWriter.writeRecords([csvContent]).then(() => {});
           } else {
             csvContent.status = res;
