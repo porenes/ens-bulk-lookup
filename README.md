@@ -1,12 +1,5 @@
-# ENS check on https://app.ens.domains
-
-Check if ENS is taken or available using this nodejs script.
-
-## System compatibility
-
-* Node v14.16.0
-* NPM v6.14.11
-
+# ENS check 
+Takes a list of ENS and returns a csv with the associated address
 
 ## Knowledge guide
 
@@ -26,11 +19,10 @@ test1,test2,test3,test4,....
 
 * Install npm dependencies
     ```
-    npm install
+    npm i
     ```
 
 * Next once you have some CSV files added to `/ens_to_process` directory then run the script -
     ```
-    npm index.js
+    npm start
     ```
-    This will parse the ENS names and create a report with results whether ens if taken or available.
